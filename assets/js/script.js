@@ -18,7 +18,7 @@ function createFloatingHeart() {
     const container = document.getElementById('floatingHearts');
     const heart = document.createElement('div');
     heart.className = 'heart';
-    heart.textContent = '<3';
+    heart.textContent = '♡';
     heart.style.left = Math.random() * 100 + '%';
     heart.style.animationDuration = (Math.random() * 5 + 8) + 's';
     heart.style.animationDelay = Math.random() * 5 + 's';

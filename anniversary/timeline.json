@@ -1,0 +1,58 @@
+{
+  "memories": [
+    {
+      "id": 1,
+      "date": "2024-09-10",
+      "title": "The Day We Met",
+      "description": "The first time our paths crossed and changed everything.",
+      "image": "assets/images/couple.jpg",
+      "gif": "assets/gifs/hero-animation.gif",
+      "color": "#ff9999"
+    },
+    {
+      "id": 2,
+      "date": "2024-11-17",
+      "title": "We Became Official",
+      "description": "The day you said yes and made me the happiest person alive.",
+      "image": "assets/images/couple.jpg",
+      "gif": "assets/gifs/hero-animation.gif",
+      "color": "#ff6b9d"
+    },
+    {
+      "id": 3,
+      "date": "2024-12-25",
+      "title": "Our First Holiday",
+      "description": "Celebrating together for the first time.",
+      "image": "assets/images/couple.jpg",
+      "gif": "assets/gifs/hero-animation.gif",
+      "color": "#ffb3ba"
+    },
+    {
+      "id": 4,
+      "date": "2025-02-14",
+      "title": "Valentine's Day",
+      "description": "A day filled with love and sweet moments.",
+      "image": "assets/images/couple.jpg",
+      "gif": "assets/gifs/hero-animation.gif",
+      "color": "#ffa502"
+    },
+    {
+      "id": 5,
+      "date": "2025-06-01",
+      "title": "Summer Adventures",
+      "description": "Making memories under the summer sun.",
+      "image": "assets/images/couple.jpg",
+      "gif": "assets/gifs/hero-animation.gif",
+      "color": "#f8b500"
+    },
+    {
+      "id": 6,
+      "date": "2025-11-17",
+      "title": "One Year Together",
+      "description": "365 days of love, laughter, and endless happiness.",
+      "image": "assets/images/couple.jpg",
+      "gif": "assets/gifs/hero-animation.gif",
+      "color": "#c44569"
+    }
+  ]
+}

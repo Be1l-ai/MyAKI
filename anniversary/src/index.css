@@ -1,0 +1,276 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Custom animations */
+@layer utilities {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes expandWidth {
+    from {
+      width: 0;
+    }
+    to {
+      width: 8rem;
+    }
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes heartFloat {
+    0% {
+      transform: translateY(0) scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-200px) scale(0.5) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .animate-fadeInDown {
+    animation: fadeInDown 1s ease-out;
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out;
+  }
+
+  .animate-scaleIn {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  .animate-expandWidth {
+    animation: expandWidth 1s ease-out;
+  }
+
+  .animate-floatUp {
+    animation: floatUp linear infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 3s ease-in-out infinite;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Grid background with gold lines and depth */
+.grid-bg-gold {
+  position: relative;
+  background-image: 
+    linear-gradient(rgba(212, 175, 55, 0.15) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.15) 2px, transparent 2px);
+  background-size: 50px 50px;
+  background-position: center center;
+}
+
+.grid-bg-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.grid-bg-gold > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Metallic gold stitched thread border effect */
+.stitched-border-gold {
+  position: relative;
+}
+
+.stitched-border-gold::before,
+.stitched-border-gold::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 8px,
+    #b8942c 8px,
+    #b8942c 10px,
+    #d4af37 10px,
+    #d4af37 14px,
+    #f4d03f 14px,
+    #f4d03f 16px,
+    #d4af37 16px,
+    #d4af37 18px,
+    transparent 18px,
+    transparent 26px
+  );
+  filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.8));
+  z-index: 10;
+}
+
+.stitched-border-gold::before {
+  top: 0;
+}
+
+.stitched-border-gold::after {
+  bottom: 0;
+}
+
+/* Stitched thread border effect (kept for non-gold sections) */
+.stitched-border {
+  position: relative;
+}
+
+.stitched-border::before,
+.stitched-border::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 10px,
+    currentColor 10px,
+    currentColor 20px
+  );
+  opacity: 0.6;
+}
+
+.stitched-border::before {
+  top: 0;
+}
+
+.stitched-border::after {
+  bottom: 0;
+}
+
+/* Remove plain section dividers */
+section {
+  position: relative;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ff9999, #ff6b9d);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #ff6b9d, #c44569);
+}
+
+/* Ensure canvas elements are responsive */
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* Prevent text selection on interactive elements */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Backdrop blur support */
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
