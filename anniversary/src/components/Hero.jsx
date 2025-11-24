@@ -48,19 +48,19 @@ export default function Hero() {
         >
           {/* Main title */}
           <h1 className="text-6xl md:text-8xl font-romantic font-bold text-theme-gold mb-6 drop-shadow-2xl animate-fadeInDown">
-            Happy Anniversary! <br/> Akiiii! ❸(｡˃ ᵕ ˂)❽♡
+            Happy Anniversary! <br/> Akiiii! (｡˃ ᵕ ˂)♡
           </h1>
           
           {/* Subtitle */}
-          <p className="text-2xl md:text-3xl font-modern text-white mb-8 drop-shadow-lg animate-fadeInUp">
+          <p className="text-xl md:text-3xl font-modern text-white mb-8 drop-shadow-lg animate-fadeInUp">
             One whole amazing year with you
           </p>
 
           {/* Decorative line */}
-          <div className="w-32 h-1 bg-theme-gold mx-auto mb-8 animate-expandWidth"></div>
+          <div className="w-32 h-1 bg-theme-gold-light mx-auto mb-8 animate-expandWidth"></div>
 
           {/* Date */}
-          <p className="text-xl md:text-2xl font-romantic text-theme-gold-light mb-12 animate-fadeIn">
+          <p className="text-xl md:text-m font-romantic text-white mb-12 animate-fadeIn">
             Aki we known each other since September 10, 2024
           </p>
 

@@ -54,7 +54,7 @@ export default function CountdownTimer() {
   const TimeUnit = ({ value, label }) => (
     <div className="flex flex-col items-center">
       <div className="bg-theme-black/80 backdrop-blur-sm rounded-lg shadow-2xl p-4 min-w-[80px] md:min-w-[100px] border-2 border-theme-gold/40">
-        <div className="text-3xl md:text-4xl font-bold text-theme-gold font-modern">
+        <div className="text-3xl md:text-4xl font-bold text-white font-modern">
           {String(value).padStart(2, '0')}
         </div>
       </div>
@@ -68,7 +68,7 @@ export default function CountdownTimer() {
     <div className="w-full py-16 px-4">
       {/* Together Timer */}
       <div className="max-w-4xl mx-auto mb-16">
-        <h2 className="text-4xl md:text-5xl font-romantic font-bold text-center text-gray-800 mb-4">
+        <h2 className="text-4xl md:text-5xl font-romantic font-bold text-center text-theme-gold mb-4">
           We've Been Together For
         </h2>
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4">
@@ -77,14 +77,11 @@ export default function CountdownTimer() {
           <TimeUnit value={timeTogetherMinutes} label="Minutes" />
           <TimeUnit value={timeTogetherSeconds} label="Seconds" />
         </div>
-        <p className="text-center text-gray-600 font-modern text-lg">
-          Since November 17, 2024 ‹𝟹 <br/> I miss you ( •̯́ ₃ •̯̀)
+        <p className="text-center text-white font-modern text-lg mb-8">
+          Since November 17, 2024 ‹𝟹 <br/> I miss you ( •̯́ ₃ •̯̀)
         </p>
-      </div>
-
-      {/* Known Timer */}
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-romantic font-bold text-center text-gray-800 mb-4">
+         {/* Known Timer */}
+        <h2 className="text-4xl md:text-5xl font-romantic font-bold text-center text-theme-gold mb-4">
           And We Known Each Other For
         </h2>
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4">
@@ -93,7 +90,7 @@ export default function CountdownTimer() {
           <TimeUnit value={timeKnownMinutes} label="Minutes" />
           <TimeUnit value={timeKnownSeconds} label="Seconds" />
         </div>
-        <p className="text-center text-gray-600 font-modern text-lg">
+        <p className="text-center text-white font-modern text-lg">
           Since September 10, 2024 𑣲
         </p>
       </div>

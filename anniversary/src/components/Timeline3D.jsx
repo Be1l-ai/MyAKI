@@ -7,6 +7,7 @@ function Card3D({ memory, offsetIndex, isActive, onClick }) {
   const groupRef = useRef();
   const [hovered, setHovered] = useState(false);
   const [texture, setTexture] = useState(null);
+  const materialRef = useRef();
 
   // Load texture
   useEffect(() => {
@@ -15,6 +16,10 @@ function Card3D({ memory, offsetIndex, isActive, onClick }) {
       loader.load(
         memory.image,
         (loadedTexture) => {
+          loadedTexture.wrapS = THREE.ClampToEdgeWrapping;
+          loadedTexture.wrapT = THREE.ClampToEdgeWrapping;
+          loadedTexture.minFilter = THREE.LinearFilter;
+          loadedTexture.needsUpdate = true;
           setTexture(loadedTexture);
         },
         undefined,
@@ -24,6 +29,14 @@ function Card3D({ memory, offsetIndex, isActive, onClick }) {
       );
     }
   }, [memory.image]);
+
+  // Force material update when texture loads
+  useEffect(() => {
+    if (materialRef.current && texture) {
+      materialRef.current.map = texture;
+      materialRef.current.needsUpdate = true;
+    }
+  }, [texture]);
 
   useFrame((state) => {
     if (groupRef.current) {
@@ -76,6 +89,7 @@ function Card3D({ memory, offsetIndex, isActive, onClick }) {
         {/* Inner photo area with image texture */}
         <RoundedBox args={[1.7, 1.7, 0.17]} radius={0.04} smoothness={4} position={[0, 0.3, 0.08]}>
           <meshStandardMaterial
+            ref={materialRef}
             map={texture}
             color={texture ? '#ffffff' : '#2d2d2d'}
             roughness={0.1}

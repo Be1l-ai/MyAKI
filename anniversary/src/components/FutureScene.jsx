@@ -6,6 +6,7 @@ import * as THREE from 'three';
 function Polaroid3D({ image, position, rotation = [0, 0, 0] }) {
   const groupRef = useRef();
   const [texture, setTexture] = useState(null);
+  const materialRef = useRef();
 
   // Load texture
   useEffect(() => {
@@ -14,6 +15,10 @@ function Polaroid3D({ image, position, rotation = [0, 0, 0] }) {
       loader.load(
         image,
         (loadedTexture) => {
+          loadedTexture.wrapS = THREE.ClampToEdgeWrapping;
+          loadedTexture.wrapT = THREE.ClampToEdgeWrapping;
+          loadedTexture.minFilter = THREE.LinearFilter;
+          loadedTexture.needsUpdate = true;
           setTexture(loadedTexture);
         },
         undefined,
@@ -23,6 +28,14 @@ function Polaroid3D({ image, position, rotation = [0, 0, 0] }) {
       );
     }
   }, [image]);
+
+  // Force material update when texture loads
+  useEffect(() => {
+    if (materialRef.current && texture) {
+      materialRef.current.map = texture;
+      materialRef.current.needsUpdate = true;
+    }
+  }, [texture]);
 
   useFrame((state) => {
     if (groupRef.current) {
@@ -35,10 +48,6 @@ function Polaroid3D({ image, position, rotation = [0, 0, 0] }) {
   return (
     <group ref={groupRef} position={position} rotation={rotation}>
       {/* Polaroid frame - black with gold border */}
-      <mesh position={[0, 0, -0.01]}>
-        <boxGeometry args={[2.2, 2.6, 0.05]} />
-        <meshStandardMaterial color="#1a1a1a" roughness={0.3} metalness={0.4} />
-      </mesh>
       
       {/* Gold border */}
       <mesh position={[0, 0, 0]}>
@@ -50,6 +59,7 @@ function Polaroid3D({ image, position, rotation = [0, 0, 0] }) {
       <mesh position={[0, 0.15, 0.03]}>
         <boxGeometry args={[1.9, 1.9, 0.06]} />
         <meshStandardMaterial 
+          ref={materialRef}
           map={texture}
           color={texture ? '#ffffff' : '#2d2d2d'} 
           roughness={0.5} 
@@ -57,16 +67,43 @@ function Polaroid3D({ image, position, rotation = [0, 0, 0] }) {
       </mesh>
       
       {/* Bottom text area */}
-      <mesh position={[0, -0.85, 0.03]}>
-        <boxGeometry args={[1.9, 0.6, 0.06]} />
-        <meshStandardMaterial color="#3a3a3a" roughness={0.4} />
-      </mesh>
     </group>
   );
 }
 
-function FloatingGif({ position, scale = 1 }) {
+function FloatingGif({ gif, position, scale = 1 }) {
   const meshRef = useRef();
+  const [texture, setTexture] = useState(null);
+  const materialRef = useRef();
+
+  // Load GIF texture
+  useEffect(() => {
+    if (gif) {
+      const loader = new THREE.TextureLoader();
+      loader.load(
+        gif,
+        (loadedTexture) => {
+          loadedTexture.wrapS = THREE.ClampToEdgeWrapping;
+          loadedTexture.wrapT = THREE.ClampToEdgeWrapping;
+          loadedTexture.minFilter = THREE.LinearFilter;
+          loadedTexture.needsUpdate = true;
+          setTexture(loadedTexture);
+        },
+        undefined,
+        (error) => {
+          console.error('Error loading gif texture:', error);
+        }
+      );
+    }
+  }, [gif]);
+
+  // Force material update when texture loads
+  useEffect(() => {
+    if (materialRef.current && texture) {
+      materialRef.current.map = texture;
+      materialRef.current.needsUpdate = true;
+    }
+  }, [texture]);
 
   useFrame((state) => {
     if (meshRef.current) {
@@ -79,11 +116,13 @@ function FloatingGif({ position, scale = 1 }) {
     <mesh ref={meshRef} position={position} scale={scale}>
       <planeGeometry args={[1, 1]} />
       <meshStandardMaterial 
-        color="#d4af37" 
-        emissive="#f4d03f"
-        emissiveIntensity={0.4}
+        ref={materialRef}
+        map={texture}
+        color={texture ? '#ffffff' : '#d4af37'}
+        emissive={texture ? '#000000' : '#f4d03f'}
+        emissiveIntensity={texture ? 0 : 0.4}
         transparent
-        opacity={0.7}
+        opacity={texture ? 1 : 0.7}
       />
     </mesh>
   );
@@ -125,9 +164,9 @@ export default function FutureScene({ futureMemories }) {
         <fog attach="fog" args={['#1a0a2e', 5, 20]} />
         <PerspectiveCamera makeDefault position={[0, 0, 6]} />
         <ambientLight intensity={0.6} />
-        <pointLight position={[5, 5, 5]} intensity={1} />
-        <pointLight position={[-5, -5, 5]} intensity={0.5} />
-        <spotLight position={[0, 5, 3]} angle={0.3} penumbra={1} intensity={0.8} />
+        <pointLight position={[5, 5, 5]} intensity={10} />
+        <pointLight position={[-5, -5, 5]} intensity={10} />
+        <spotLight position={[0, 5, 3]} angle={0.3} penumbra={1} intensity={1} />
         
         <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
         <BackgroundSpheres />
@@ -150,10 +189,10 @@ export default function FutureScene({ futureMemories }) {
         />
         
         {/* Floating GIF placeholders */}
-        <FloatingGif position={[-3.5, 1.5, -1]} scale={0.8} />
-        <FloatingGif position={[3.5, -1, -1]} scale={0.6} />
-        <FloatingGif position={[-1.5, -1.8, -0.5]} scale={0.7} />
-        <FloatingGif position={[1.8, 2, -0.5]} scale={0.5} />
+        <FloatingGif gif={futureMemories[0]?.gif} position={[-3.5, 1.5, -1]} scale={0.8} />
+        <FloatingGif gif={futureMemories[1]?.gif} position={[3.5, -1, -1]} scale={0.6} />
+        <FloatingGif gif={futureMemories[2]?.gif} position={[-1.5, -1.8, -0.5]} scale={0.7} />
+        <FloatingGif gif={futureMemories[0]?.gif} position={[1.8, 2, -0.5]} scale={0.5} />
         
         <OrbitControls 
           enableZoom={true}

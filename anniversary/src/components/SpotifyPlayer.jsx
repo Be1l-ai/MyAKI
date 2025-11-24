@@ -5,12 +5,18 @@ export default function SpotifyPlayer() {
   const spotifyPlaylistUrl = "https://open.spotify.com/embed/playlist/26Ss0Cwj2sU12khzuDDZVh?utm_source=generator&theme=0";
 
   return (
-    <div className="w-full py-16 px-4">
+    <div className="w-full bg-white py-16 px-4 border-t-2 border-theme-gold grid-bg-gold relative overflow-hidden">
+      {/* Grid background */}
+      <div className="absolute inset-0 opacity-20" style={{
+        backgroundImage: `linear-gradient(rgba(212, 175, 55, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 175, 55, 0.3) 1px, transparent 1px)`,
+        backgroundSize: '40px 40px'
+      }}></div>
+
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-romantic font-bold text-center text-theme-gold mb-4">
-          Playlist (•̀ᴗ•́ )
+          Playlist for Us hehe (•̀ᵗ•́ )
         </h2>
-        <p className="text-center text-theme-gold/80 font-modern text-lg mb-8">
+        <p className="text-center text-theme-charcoal font-modern text-m mb-8">
           Theme playlist for the year 🎵 <br/> I mean po songs for us
         </p>
         
@@ -27,7 +33,7 @@ export default function SpotifyPlayer() {
             className="w-full"
           ></iframe>
           
-          <p className="text-center text-theme-gold/70 font-modern text-sm mt-4">
+          <p className="text-center text-theme-charcoal font-modern text-sm mt-4">
             Click play po Akiii ( •⌄• )✧
           </p>
         </div>

@@ -28,7 +28,7 @@ function App() {
           <h2 className="text-5xl font-romantic font-bold text-center text-theme-gold mb-4">
             Our Timeline pooo (^᎑^๑)/♡
           </h2>
-          <p className="text-center text-gray-300 font-modern text-lg mb-8">
+          <p className="text-center text-white font-modern text-lg mb-8">
             Our dates and favorite moments hehe (˶˘ ³˘(´͈ ᵕ `͈˶)
           </p>
           <Timeline3D memories={timelineData.memories} />

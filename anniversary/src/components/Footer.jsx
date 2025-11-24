@@ -12,10 +12,10 @@ export default function Footer() {
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Main message */}
         <div className="text-center mb-8">
-          <h3 className="text-3xl font-romantic font-bold mb-4 text-black">
+          <h3 className="text-3xl font-romantic font-bold mb-4 text-theme-black">
             Forever and Always
           </h3>
-          <p className="text-lg font-modern text-black">
+          <p className="text-lg font-modern text-theme-charcoal">
             Thank you for being my everything ❤️
           </p>
         </div>
@@ -25,23 +25,23 @@ export default function Footer() {
 
         {/* Notes section */}
         <div className="text-center space-y-4 mb-8">
-          <p className="font-modern text-sm md:text-base text-black">
+          <p className="font-modern text-sm md:text-base text-theme-charcoal">
             💝 Every moment with you is a treasure
           </p>
-          <p className="font-modern text-sm md:text-base text-black">
+          <p className="font-modern text-sm md:text-base text-theme-charcoal">
             🌟 You make every day brighter
           </p>
-          <p className="font-modern text-sm md:text-base text-black">
+          <p className="font-modern text-sm md:text-base text-theme-charcoal">
             ✨ Here's to many more adventures together
           </p>
         </div>
 
         {/* Custom notes area - editable */}
         <div className="bg-theme-gold/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-theme-gold/50">
-          <h4 className="text-xl font-romantic font-bold text-center mb-4 text-black">
+          <h4 className="text-xl font-romantic font-bold text-center mb-4 text-theme-black">
             Special Notes
           </h4>
-          <div className="space-y-2 text-center font-modern text-sm md:text-base text-black">
+          <div className="space-y-2 text-center font-modern text-sm md:text-base text-theme-charcoal">
             <p>📝 Add your personal notes here</p>
             <p>📝 Share your favorite memories</p>
             <p>📝 Write promises for the future</p>
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom text */}
-        <div className="text-center text-sm font-modern text-black">
+        <div className="text-center text-sm font-modern text-theme-charcoal">
           <p>Made with 💖 for Aki</p>
           <p className="mt-2">© {new Date().getFullYear()} • Our Love Story Continues...</p>
         </div>

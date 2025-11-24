@@ -16,7 +16,7 @@ export default function LoveLetter() {
           delay: Math.random() * 0.5,
           duration: 1 + Math.random() * 2,
           rotation: Math.random() * 360,
-          emoji: ['❤️', '💕', '💖', '💗', '💓', '💝', '💞'][Math.floor(Math.random() * 7)]
+          emoji: ['❤︎', '♡', '♥︎'][Math.floor(Math.random() * 7)]
         });
       }
       setHearts(newHearts);
@@ -43,8 +43,8 @@ export default function LoveLetter() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-theme-gold to-theme-gold-dark rounded-full animate-pulse shadow-lg shadow-theme-gold/50"></div>
           <div className="absolute inset-2 bg-theme-black rounded-full flex items-center justify-center border-2 border-theme-gold/30">
-            <span className="text-6xl group-hover:scale-110 transition-transform duration-300">
-              ❤️
+            <span className="text-6xl text-theme-gold group-hover:scale-110 transition-transform duration-300">
+              ❤︎
             </span>
           </div>
           <p className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-white font-modern text-sm">
@@ -124,7 +124,7 @@ export default function LoveLetter() {
                 </p>
                 
                 <p className="text-xl font-romantic font-bold text-white text-center mt-8">
-                  Here's to us, to our love, and to forever. ❤️
+                  Here's to us, to our love, and to forever.
                 </p>
                 
                 <p className="text-right italic mt-8 text-white">
