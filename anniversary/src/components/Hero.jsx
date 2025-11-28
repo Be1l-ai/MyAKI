@@ -64,12 +64,11 @@ export default function Hero() {
             Aki we known each other since September 10, 2024
           </p>
 
-          {/* GIF placeholder */}
+          {/* GIF */}
           <div className="relative inline-block animate-bounce-slow">
             <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-theme-gold/20 backdrop-blur-sm border-4 border-theme-gold/50 flex items-center justify-center overflow-hidden shadow-2xl">
-              {/* Replace with actual GIF */}
               <img 
-                src="/assets/gifs/hero-animation.gif" 
+                src="/gifs/hero-animation.gif" 
                 alt="ken and rai"
                 className="w-full h-full object-cover"
                 onError={(e) => {
