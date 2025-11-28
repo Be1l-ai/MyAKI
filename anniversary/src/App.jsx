@@ -43,7 +43,7 @@ function App() {
       {/* Love Letter */}
       <section id="letter" className="bg-theme-black py-16 relative border-t-4 border-b-4 border-theme-gold stitched-border-gold">
         <h2 className="text-5xl font-romantic font-bold text-center text-white mb-8">
-          A Message From My Heart
+          A Message for my Aki
         </h2>
         <LoveLetter />
       </section>

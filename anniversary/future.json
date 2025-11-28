@@ -2,24 +2,24 @@
   "futureMemories": [
     {
       "id": 1,
-      "title": "Our Future Adventure",
-      "description": "More memories to create together",
-      "image": "public/images/couple.jpg",
-      "gif": "public/gifs/hero-animation.gif"
+      "title": "We'll be together",
+      "description": "Hindi na po tayo ldr in next few years syempre",
+      "image": "/images/couple.jpg",
+      "gif": "/gifs/dudu_flower.gif"
     },
     {
       "id": 2,
-      "title": "Dreams Come True",
-      "description": "All the plans we've talked about",
-      "image": "public/images/couple.jpg",
-      "gif": "public/gifs/hero-animation.gif"
+      "title": "We'll be married",
+      "description": "Of course we will me a married couple (｡•̀ᴗ-)✧",
+      "image": "/images/marriage.jpeg",
+      "gif": "/gifs/dudu_bubu_happy.gif"
     },
     {
       "id": 3,
-      "title": "Forever and Always",
-      "description": "Our story continues",
-      "image": "public/images/couple.jpg",
-      "gif": "public/gifs/hero-animation.gif"
+      "title": "We'll grow old together",
+      "description": "We will have a lot of stories, hard ships, and memories to tell our grandchildren. Everything we been through and overcome together.",
+      "image": "/images/old_couple.jpeg",
+      "gif": "/gifs/hero-animation.gif"
     }
   ]
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SpotifyPlayer() {
   // Full playable Spotify playlist embed
-  const spotifyPlaylistUrl = "https://open.spotify.com/embed/playlist/26Ss0Cwj2sU12khzuDDZVh?utm_source=generator&theme=0";
+  const spotifyPlaylistUrl = "https://open.spotify.com/embed/playlist/0ocz0XC5uTppXkA0ZI3mNf?utm_source=oembed";
 
   return (
     <div className="w-full bg-white py-16 px-4 border-t-2 border-theme-gold grid-bg-gold relative overflow-hidden">

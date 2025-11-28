@@ -209,17 +209,20 @@ export default function FutureScene({ futureMemories }) {
       {/* Overlay text */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
         <h2 className="text-6xl font-romantic font-bold text-theme-gold text-center drop-shadow-2xl">
-          Our Future
+          Us in Future hehe
         </h2>
         <p className="text-xl font-modern text-gray-300 text-center mt-4 drop-shadow-lg">
-          Together, forever
+          For 100 lifetimes and more
+        </p>
+        <p className="text-xl font-modern text-gray-300 text-center mt-4 drop-shadow-lg">
+          (｡˃ ᵕ ˂)♡
         </p>
       </div>
       
       {/* Instructions */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white text-center">
         <p className="font-modern text-sm bg-theme-black/60 border border-theme-gold/30 px-4 py-2 rounded-full backdrop-blur-md shadow-lg">
-          Drag to rotate • Right-click to pan • Scroll to zoom
+          Drag to rotate po and pinch to zoom in or out aki
         </p>
       </div>
     </div>

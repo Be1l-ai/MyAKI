@@ -13,10 +13,10 @@ export default function Footer() {
         {/* Main message */}
         <div className="text-center mb-8">
           <h3 className="text-3xl font-romantic font-bold mb-4 text-theme-black">
-            Forever and Always
+            I love you for Eternity, Aki
           </h3>
           <p className="text-lg font-modern text-theme-charcoal">
-            Thank you for being my everything ❤️
+            Thank you for being my everything
           </p>
         </div>
 
@@ -26,13 +26,13 @@ export default function Footer() {
         {/* Notes section */}
         <div className="text-center space-y-4 mb-8">
           <p className="font-modern text-sm md:text-base text-theme-charcoal">
-            💝 Every moment with you is a treasure
+            Every day that I'm with you is every day that I would choose you again
           </p>
           <p className="font-modern text-sm md:text-base text-theme-charcoal">
-            🌟 You make every day brighter
+            You always make my day better and my life lighter
           </p>
           <p className="font-modern text-sm md:text-base text-theme-charcoal">
-            ✨ Here's to many more adventures together
+            I'm looking forward to many more days and memory we would have Aki
           </p>
         </div>
 
@@ -42,16 +42,15 @@ export default function Footer() {
             Special Notes
           </h4>
           <div className="space-y-2 text-center font-modern text-sm md:text-base text-theme-charcoal">
-            <p>📝 Add your personal notes here</p>
-            <p>📝 Share your favorite memories</p>
-            <p>📝 Write promises for the future</p>
+            <p>First, Sorry po medyo new ako sa technology na ginamit dito hehe kaya hindi ganun kaganda yung pagkakagawa ko po</p>
+            <p>Which part do you like the best aki? I hope you like my gift, ahhhh pati physical gift ko hindi maayos (*꒦ິ꒳꒦ີ)</p>
+            <p>I love you so much aki, I can't wait to see you for this upcoming saturday. I miss you so much. ( •̯́ ^ •̯̀)</p>
           </div>
         </div>
 
         {/* Bottom text */}
         <div className="text-center text-sm font-modern text-theme-charcoal">
-          <p>Made with 💖 for Aki</p>
-          <p className="mt-2">© {new Date().getFullYear()} • Our Love Story Continues...</p>
+          <p>Made for my Aki</p>
         </div>
       </div>
     </footer>

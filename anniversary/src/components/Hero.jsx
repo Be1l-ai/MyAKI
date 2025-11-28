@@ -13,7 +13,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-gradient-to-br from-theme-black via-theme-charcoal to-theme-gray"
         style={{
-          backgroundImage: 'url(/assets/images/couple.jpg)',
+          backgroundImage: 'url(/images/couple.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
