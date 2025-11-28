@@ -1,6 +1,6 @@
 // === Configuration ===
 const TARGET_DATE = new Date('2025-11-30T00:00:00').getTime();
-const REDIRECT_URL = 'anniversary/index.html'; // Anniversary page
+const REDIRECT_URL = 'https://anniversary-eosin-nine.vercel.app/'; // Anniversary page
 const PLAN_C_PASSWORD = 'hotel'; // Replace with your desired password for Plan C
 
 // Plan-specific songs and lyrics
