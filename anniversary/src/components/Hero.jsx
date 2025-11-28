@@ -9,11 +9,11 @@ export default function Hero() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Background Image - placeholder */}
+      {/* Background Image */}
       <div 
         className="absolute inset-0 bg-gradient-to-br from-theme-black via-theme-charcoal to-theme-gray"
         style={{
-          backgroundImage: 'url(assets/images/couple.jpg)',
+          backgroundImage: 'url(/assets/images/couple.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -34,7 +34,7 @@ export default function Hero() {
               animationDuration: `${8 + Math.random() * 4}s`,
             }}
           >
-            {['❤︎', '♡', '♥︎', '𦃲', '𖝭', '᫫᭡', '‹𝞹'][Math.floor(Math.random() * 5)]}
+            {['❤︎', '♡', '♥︎'][Math.floor(Math.random() * 5)]}
           </div>
         ))}
       </div>
@@ -53,7 +53,7 @@ export default function Hero() {
           
           {/* Subtitle */}
           <p className="text-xl md:text-3xl font-modern text-white mb-8 drop-shadow-lg animate-fadeInUp">
-            One whole amazing year with you
+            It's been an amazing year with you
           </p>
 
           {/* Decorative line */}
@@ -69,7 +69,7 @@ export default function Hero() {
             <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-theme-gold/20 backdrop-blur-sm border-4 border-theme-gold/50 flex items-center justify-center overflow-hidden shadow-2xl">
               {/* Replace with actual GIF */}
               <img 
-                src="assets/gifs/hero-animation.gif" 
+                src="/assets/gifs/hero-animation.gif" 
                 alt="ken and rai"
                 className="w-full h-full object-cover"
                 onError={(e) => {

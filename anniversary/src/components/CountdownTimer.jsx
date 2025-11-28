@@ -69,7 +69,7 @@ export default function CountdownTimer() {
       {/* Together Timer */}
       <div className="max-w-4xl mx-auto mb-16">
         <h2 className="text-4xl md:text-5xl font-romantic font-bold text-center text-theme-gold mb-4">
-          We've Been Together For
+          Akiii, We've Been Together For
         </h2>
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4">
           <TimeUnit value={timeTogetherDays} label="Days" />

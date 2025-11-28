@@ -4,22 +4,22 @@
       "id": 1,
       "title": "Our Future Adventure",
       "description": "More memories to create together",
-      "image": "assets/images/couple.jpg",
-      "gif": "assets/gifs/hero-animation.gif"
+      "image": "public/images/couple.jpg",
+      "gif": "public/gifs/hero-animation.gif"
     },
     {
       "id": 2,
       "title": "Dreams Come True",
       "description": "All the plans we've talked about",
-      "image": "assets/images/couple.jpg",
-      "gif": "assets/gifs/hero-animation.gif"
+      "image": "public/images/couple.jpg",
+      "gif": "public/gifs/hero-animation.gif"
     },
     {
       "id": 3,
       "title": "Forever and Always",
       "description": "Our story continues",
-      "image": "assets/images/couple.jpg",
-      "gif": "assets/gifs/hero-animation.gif"
+      "image": "public/images/couple.jpg",
+      "gif": "public/gifs/hero-animation.gif"
     }
   ]
 }
