@@ -1,0 +1,20 @@
+      <div class="player-wrap">
+        <div class="album-art">🌌</div>
+        <div class="song-title">Iris</div>
+        <div class="song-artist">Goo Goo Dolls · Dizzy Up the Girl</div>
+        <div style="width:100%">
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <div class="player-times"><span>1:46</span><span>4:51</span></div>
+        </div>
+        <div class="player-controls">
+          <button class="ctrl-btn">⏮</button>
+          <button class="ctrl-play" type="button" aria-label="Play or pause">▶</button>
+          <button class="ctrl-btn">⏭</button>
+        </div>
+        <div class="player-note">
+          <strong>"And I don't want the world to see me<br>'cause I don't think that they'd understand."</strong><br><br>
+          I think about this line a lot. You're someone who keeps your most important feelings to yourself — not because you don't have them, but because they're yours and they're real and the world doesn't always deserve them.<br><br>
+          This song is ours. But this line especially feels like you.<br>I'm glad you let me close enough to hear it anyway.
+        </div>
+      </div>
+    

@@ -1,0 +1,32 @@
+      <div class="drafts-wrap">
+        <div class="drafts-intro">
+          // these are yours. i know you feel them.<br>
+          // i just wrote them down so you didn't have to.
+        </div>
+        <div class="draft-item">
+          <div class="draft-meta">draft_001.txt — unsent</div>
+          <div class="draft-text">"I actually really liked that."</div>
+          <div class="draft-note">The thing you enjoyed but didn't say out loud because it felt too exposed. I saw it on your face. It's fine. I liked it too.</div>
+        </div>
+        <div class="draft-item">
+          <div class="draft-meta">draft_002.txt — unsent</div>
+          <div class="draft-text">"I was scared too."</div>
+          <div class="draft-note">At the beginning. When things started to matter. When it stopped being easy to protect yourself from it. I know. Me too.</div>
+        </div>
+        <div class="draft-item">
+          <div class="draft-meta">draft_003.txt — unsent</div>
+          <div class="draft-text">"Thank you for not making it weird."</div>
+          <div class="draft-note">For not pushing when I went quiet. For not treating my silence like a problem to fix. That made it easier to come back.</div>
+        </div>
+        <div class="draft-item">
+          <div class="draft-meta">draft_004.txt — unsent</div>
+          <div class="draft-text">"I'm glad you stayed."</div>
+          <div class="draft-note">Even when I gave you every reason not to. Even when I was hard to reach. You stayed at a comfortable distance and let me find my way back. That meant everything.</div>
+        </div>
+        <div class="draft-item">
+          <div class="draft-meta">draft_005.txt — unsent</div>
+          <div class="draft-text">"I love you more than I know how to say."</div>
+          <div class="draft-note">And I know you know that. You don't need the words to be loud to know they're true. That's the part I love most about you.</div>
+        </div>
+      </div>
+    

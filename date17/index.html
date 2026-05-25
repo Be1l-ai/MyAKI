@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>date17.os</title>
+<link href="https://fonts.googleapis.com/css2?family=Berkeley+Mono&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+
+<!-- Stars -->
+<div class="stars" id="stars"></div>
+
+<!-- Desktop -->
+<div class="desktop">
+
+  <!-- Menubar -->
+  <div class="menubar">
+    <span class="menubar-logo">♡ date17.os</span>
+    <div class="menubar-items">
+      <span class="menubar-item">File</span>
+      <span class="menubar-item">Edit</span>
+      <span class="menubar-item">View</span>
+      <span class="menubar-item">Help</span>
+    </div>
+    <div class="menubar-right">
+      <span class="menubar-time" id="clock">00:00</span>
+    </div>
+  </div>
+
+  <!-- Desktop area -->
+  <div class="desktop-area">
+    <div class="icon-grid">
+        <div class="desktop-icon" data-window="reasons" tabindex="0" role="button" onclick="openWindow('reasons')">
+        <div class="icon-img">📁</div>
+        <div class="icon-label">why_you (17).txt</div>
+      </div>
+        <div class="desktop-icon" data-window="player" tabindex="0" role="button" onclick="openWindow('player')">
+        <div class="icon-img">🎵</div>
+        <div class="icon-label">iris.mp3</div>
+      </div>
+        <div class="desktop-icon" data-window="settings" tabindex="0" role="button" onclick="openWindow('settings')">
+        <div class="icon-img">⚙️</div>
+        <div class="icon-label">relationship_settings</div>
+      </div>
+        <div class="desktop-icon" data-window="bugs" tabindex="0" role="button" onclick="openWindow('bugs')">
+        <div class="icon-img">🐛</div>
+        <div class="icon-label">bug_report.log</div>
+      </div>
+        <div class="desktop-icon" data-window="drafts" tabindex="0" role="button" onclick="openWindow('drafts')">
+        <div class="icon-img">💌</div>
+        <div class="icon-label">unsent_drafts/</div>
+      </div>
+        <div class="desktop-icon" data-window="letter" tabindex="0" role="button" onclick="openWindow('letter')">
+        <div class="icon-img">🔒</div>
+        <div class="icon-label">read_me_last.love</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dock -->
+  <div class="dock-wrap">
+    <div class="dock">
+        <div class="dock-icon" data-window="reasons" data-tip="why_you (17)" tabindex="0" role="button" onclick="openWindow('reasons')">📁</div>
+        <div class="dock-icon" data-window="player" data-tip="iris.mp3" tabindex="0" role="button" onclick="openWindow('player')">🎵</div>
+        <div class="dock-icon" data-window="settings" data-tip="relationship_settings" tabindex="0" role="button" onclick="openWindow('settings')">⚙️</div>
+      <div class="dock-sep"></div>
+        <div class="dock-icon" data-window="bugs" data-tip="bug_report.log" tabindex="0" role="button" onclick="openWindow('bugs')">🐛</div>
+        <div class="dock-icon" data-window="drafts" data-tip="unsent_drafts/" tabindex="0" role="button" onclick="openWindow('drafts')">💌</div>
+      <div class="dock-sep"></div>
+        <div class="dock-icon" data-window="letter" data-tip="read_me_last.love" tabindex="0" role="button" onclick="openWindow('letter')">🔒</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Window layer -->
+<div class="window-overlay" id="overlay">
+
+  <!-- 17 REASONS -->
+  <div class="window hidden" id="win-reasons" style="top:60px;left:80px;width:440px;">
+    <div class="titlebar">
+      <div class="traffic-lights">
+        <div class="tl tl-red" onclick="closeWindow('reasons')"></div>
+        <div class="tl tl-yellow"></div>
+        <div class="tl tl-green"></div>
+      </div>
+      <div class="titlebar-name">why_you (17).txt</div>
+      <button class="window-close" type="button" onclick="closeWindow('reasons')" aria-label="Close why_you popup">×</button>
+      <div style="width:46px"></div>
+    </div>
+    <div class="window-body">
+      <div id="reasons-content"></div>
+    </div>
+  </div>
+
+  <!-- MUSIC PLAYER -->
+  <div class="window hidden" id="win-player" style="top:80px;left:200px;width:380px;">
+    <div class="titlebar">
+      <div class="traffic-lights">
+        <div class="tl tl-red" onclick="closeWindow('player')"></div>
+        <div class="tl tl-yellow"></div>
+        <div class="tl tl-green"></div>
+      </div>
+      <div class="titlebar-name">iris.mp3</div>
+      <button class="window-close" type="button" onclick="closeWindow('player')" aria-label="Close music player">×</button>
+      <div style="width:46px"></div>
+    </div>
+    <div class="window-body">
+      <div id="player-content"></div>
+    </div>
+  </div>
+
+  <!-- SETTINGS -->
+  <div class="window hidden" id="win-settings" style="top:70px;left:320px;width:520px;">
+    <div class="titlebar">
+      <div class="traffic-lights">
+        <div class="tl tl-red" onclick="closeWindow('settings')"></div>
+        <div class="tl tl-yellow"></div>
+        <div class="tl tl-green"></div>
+      </div>
+      <div class="titlebar-name">relationship_settings.app</div>
+      <button class="window-close" type="button" onclick="closeWindow('settings')" aria-label="Close settings">×</button>
+      <div style="width:46px"></div>
+    </div>
+    <div class="window-body">
+      <div id="settings-content"></div>
+    </div>
+  </div>
+
+  <!-- BUG REPORT -->
+  <div class="window hidden" id="win-bugs" style="top:90px;left:100px;width:460px;">
+    <div class="titlebar">
+      <div class="traffic-lights">
+        <div class="tl tl-red" onclick="closeWindow('bugs')"></div>
+        <div class="tl tl-yellow"></div>
+        <div class="tl tl-green"></div>
+      </div>
+      <div class="titlebar-name">bug_report.log</div>
+      <button class="window-close" type="button" onclick="closeWindow('bugs')" aria-label="Close bug report">×</button>
+      <div style="width:46px"></div>
+    </div>
+    <div class="window-body">
+      <div id="bugs-content"></div>
+    </div>
+  </div>
+
+  <!-- UNSENT DRAFTS -->
+  <div class="window hidden" id="win-drafts" style="top:75px;left:260px;width:420px;">
+    <div class="titlebar">
+      <div class="traffic-lights">
+        <div class="tl tl-red" onclick="closeWindow('drafts')"></div>
+        <div class="tl tl-yellow"></div>
+        <div class="tl tl-green"></div>
+      </div>
+      <div class="titlebar-name">unsent_drafts/</div>
+      <button class="window-close" type="button" onclick="closeWindow('drafts')" aria-label="Close drafts">×</button>
+      <div style="width:46px"></div>
+    </div>
+    <div class="window-body">
+      <div id="drafts-content"></div>
+    </div>
+  </div>
+
+  <!-- LOVE LETTER -->
+  <div class="window hidden" id="win-letter" style="top:65px;left:180px;width:500px;">
+    <div class="titlebar">
+      <div class="traffic-lights">
+        <div class="tl tl-red" onclick="closeWindow('letter')"></div>
+        <div class="tl tl-yellow"></div>
+        <div class="tl tl-green"></div>
+      </div>
+      <div class="titlebar-name">read_me_last.love</div>
+      <button class="window-close" type="button" onclick="closeWindow('letter')" aria-label="Close love letter">×</button>
+      <div style="width:46px"></div>
+    </div>
+    <div class="window-body">
+      <div id="letter-content"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>

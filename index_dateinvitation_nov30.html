@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Anniversary Picnic Date</title>
+    <link rel="stylesheet" href="assets/css/anniversary.css">
+</head>
+<body>
+    <!-- Floating GIF decorations -->
+    <div class="gif-float gif-left-top">
+        <img src="https://media.tenor.com/vzkveVGDzmAAAAAj/dudu-hug-bubu-dudu-kiss.gif" alt="decorative gif">
+    </div>
+    <div class="gif-float gif-right-middle">
+        <img src="https://media.tenor.com/wIx44jsp4DMAAAAj/kiss.gif" alt="decorative gif">
+    </div>
+    <div class="gif-float gif-left-bottom">
+        <img src="https://media.tenor.com/OrxXcqX25KcAAAAj/dudu-bubu-love-gif.gif" alt="decorative gif">
+    </div>
+
+    <!-- Music Control Button -->
+    <button id="musicToggle" class="music-button">
+        <span class="play-icon">♪♫</span>
+        <span class="pause-icon" style="display:none;">||</span>
+    </button>
+
+    <!-- Falling Animation Container -->
+    <div id="fallingContainer"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="gif-inline">
+                <img src="https://media.tenor.com/JcPATwwdUOQAAAAj/bubu-dudu-sseeyall.gif" alt="celebration gif">
+            </div>
+            <h1 class="hero-title">Happy Anniversary Akiii! ( ˘ ³˘)♥︎</h1>
+            <p class="anniversary-date">We've been together since November 17, ang tagal na po no</p>
+            <p class="date-details">Let's have a special picnic date(•̀ᴗ•́ )</p>
+            <p class="date-when">November 30, 2024 • Sunday</p>
+        </div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="love-letter">
+        <div class="container">
+            <div class="letter-wrapper">
+                <div class="gif-side">
+                    <img src="https://media1.tenor.com/m/E2_i2XDqoG4AAAAC/shakespaw.gif" alt="love gif">
+                </div>
+                <div class="letter-content">
+                    <h2 class="section-title">A short letter for you Aki</h2>
+                    <div class="letter-paper">
+                        <p>I want to start this letter about how much i miss you already, i cant wait for next week already aki. Feeling ko we haven't seen each other for 10 years already. I miss your scent, you eyes, your smile, kiss and hugs, i miss everything about you.</p>
+                        <p>Aki, Thank you for everything. Thank you for letting me be part of your life, for being gentle at me and for understanding me even when im being unreasonable. It's been a wonderful year and I'm so thankful that i manage to spend this year with you.</p>
+                        <p>I said this is just going to be a short message pero parang napapahaba na hehe, I don't really have anything much to say here nasa isang part pa ng letter po.</p>
+                        <p>I simply want to add my wish here, for both the two of us. I wish that we continue to grow together, support each other, and create more beautiful memories that last a lifetime. A 100 lifetimes po.</p>
+                        <p>I wish that even when everything get rough, when more hard times come, we will still hold on to each other, stronger than we ever been. I wish that you could always stay healthy and safe. I wish that we can achieve both of our dreams together and I wish that life wouldn't be too cruel at us.</p>
+                        <p>I love you for eternity Aki and I would never get tired of you.</p>
+                        <p class="signature">With all my love,<br>Kenny</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerary Carousel Section -->
+    <section class="itinerary-section">
+        <div class="container">
+            <h2 class="section-title">Date Plans (≖⩊≖)</h2>
+            <p class="subtitle">We have Plan A, B and C po</p>
+            
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" id="prevBtn">❮</button>
+                
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Plan A -->
+                    <div class="carousel-card active" data-plan="a">
+                        <div class="card-header">
+                            <h3>Plan A: Tagaytay Picnic Groove</h3>
+                            <div class="plan-gif">
+                                <img src="https://media.tenor.com/fDmMTzoyZCYAAAAj/tkthao219-bubududu.gif" alt="garden picnic">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="info-item">
+                                <span class="icon">∘ ∘ ∘ ( °ヮ° ) ?</span>
+                                <strong>Where:</strong> TagayTay Picnic Groove, Tagaytay City
+                                <strong>Meet up place:</strong> Walter Dasmariñas, Cavite
+                            </div>
+                            <div class="info-item">
+                                <span class="icon">(╭ರ_•́)</span>
+                                <strong>When:</strong> 10am - 7pm, November 30, 2025
+                            </div>
+                            <div class="info-item">
+                                <span class="icon">\(; ~ ; )√</span>
+                                <strong>Who:</strong> Me and You (˵ ͡° ͜ʖ ͡°˵)
+                            </div>
+                            <div class="info-item">
+                                <span class="icon">(˵ •̀ ᴗ - ˵ ) ✧</span>
+                                <strong>What to Bring:</strong>
+                                <ul>
+                                    <li>You and Your beautiful smile</li>
+                                    <li>Stacks pooo</li>
+                                    <li>Playing card or board(optional po)</li>
+                                    <li>Umbrella and Slippers (optional, i'll bring them)</li>
+                                    <li>Kumot? I'm not sure po but i think picnic needs that</li>
+                                </ul>
+                            </div>
+                            <div class="timeline">
+                                <strong>Timeline:</strong>
+                                <div class="timeline-item">
+                                    <span class="time">10am - 11am</span>
+                                    <span class="activity">Extra time, you can be late po or early lunch hehe</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="time">11am - 12pm</span>
+                                    <span class="activity">Commute papunta po sa place</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="time">12:30pm - 6pm</span>
+                                    <span class="activity">Full afternoon inside the part po, we can view taal, eat snacks, play cards, optional zipline (meron daw po)</span>
+                                </div>
+                            </div>
+                            <div class="message-box">
+                                <strong>♡ Note:</strong>
+                                <p>Chill day, let's catch up some rest together po (˶˃ ᵕ ˂˶)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan B -->
+                    <div class="carousel-card" data-plan="b">
+                        <div class="card-header">
+                            <h3>Plan B: Tagaytay People's Sky Park</h3>
+                            <div class="plan-gif">
+                                <img src="https://media.tenor.com/kAsQ1RlkEasAAAAj/bubududu-eat.gif" alt="beach picnic">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="info-item">
+                                <span class="icon">∘ ∘ ∘ ( °ヮ° ) ?</span>
+                                <strong>Where:</strong> People's Sky Park, Tagaytay City
+                                <strong>Meet up place:</strong> Walter Dasmariñas, Cavite
+                            </div>
+                            <div class="info-item">
+                                <span class="icon">(╭ರ_•́)</span>
+                                <strong>When:</strong> 10am - 7pm, November 30, 2025
+                            </div>
+                            <div class="info-item">
+                                <span class="icon">\(; ~ ; )√</span>
+                                <strong>Who:</strong> Me and You (˶ᵔ ᵕ ᵔ˶)
+                            </div>
+                            <div class="info-item">
+                                <span class="icon">(˵ •̀ ᴗ - ˵ ) ✧</span>
+                                <strong>What to Bring:</strong>
+                                <ul>
+                                    <li>You and Youre beautiful eyes and smile ⎛⎝ ≽  >  ⩊   < ≼ ⎠⎞</li>
+                                    <li>The rest is the same as the previous plan po</li>
+                                </ul>
+                            </div>
+                            <div class="timeline">
+                                <strong>Timeline:</strong>
+                                <div class="timeline-item">
+                                    <span class="time">10am - 11am</span>
+                                    <span class="activity">Same as previous one po Extra time</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="time">11am - 12pm</span>
+                                    <span class="activity">Commute papunta po sa place, people sky is need picnic groove daw po we can switch place easily</span>
+                                </div>
+                                <div class="timeline-item">
+                                    <span class="time">12:30pm - 6pm</span>
+                                    <span class="activity">We can see taal po dito talaga, like kitang kita po mataas po to eh. May mga shop din po dito.</span>
+                                </div>
+                            </div>
+                            <div class="message-box">
+                                <strong>♡ Special Note:</strong>
+                                <p>I miss you aki <br/> ay, this place is tall po and madaming lakad</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Plan C -->
+                    <div class="carousel-card" data-plan="c">
+                        <div class="card-body">
+                            <!-- Password Lock -->
+                            <div class="password-lock" id="planCLock">
+                                <div class="lock-icon-big">ꗃ</div>
+                                <h3>Secret Plan C</h3>
+                                <h4>I Locked this one!</h4>
+                                <p>Password po muna, this is between us only aki (˵ ¬ᴗ¬˵)</p>
+                                <div class="password-input-group">
+                                    <input 
+                                        type="text" 
+                                        id="planCPassword" 
+                                        class="password-input" 
+                                        placeholder="Enter password"
+                                        maxlength="20"
+                                    >
+                                    <div class="password-hint">
+                                        (i) Hint: Staring with 'h' and ends with 'l', actual name of the place ( ͡° ͜ʖ ͡°)
+                                    </div>
+                                </div>
+                                <button class="unlock-btn" id="unlockPlanC">Unlock Plan ꗃ</button>
+                                <div class="password-error" id="passwordError">
+                                    ✖ Mali, Sino ka hindi ka si aki
+                                </div>
+                            </div>
+                            
+                            <!-- Locked Content (Hidden until password is correct) -->
+                            <div class="locked-content" id="planCContent">
+                                <div class="card-header">
+                                    <h3>Plan C: Hotel</h3>
+                                    <div class="plan-gif">
+                                        <img src="https://media.tenor.com/NuyR7sUkAqgAAAAj/dudu-bubu.gif" alt="mountain picnic">
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <span class="icon">( ｡ •̀ ᵕ •́ ｡)</span>
+                                    <strong>Where:</strong> Winston's Hotel, Pasay
+                                    <strong>Meet up place:</strong> Moa or baclaran, Manila
+                                </div>
+                                <div class="info-item">
+                                    <span class="icon">(≖⩊≖)</span>
+                                    <strong>When:</strong> Still 10am - 7pm, November 30, 2025
+                                </div>
+                                <div class="info-item">
+                                    <span class="icon">(˵ ¬ᴗ¬˵)</span>
+                                    <strong>Who:</strong> Me and You or course (⸝⸝⸝O﹏O⸝⸝⸝)
+                                </div>
+                                <div class="info-item">
+                                    <span class="icon">(⸝⸝ᵕᴗᵕ⸝⸝)</span>
+                                    <strong>What to Bring:</strong>
+                                    <ul>
+                                        <li>You and You're beautiful and gorgeous eyes and smile</li>
+                                        <li>Protection (I know you said nothing freaky but ill bring some to prepare in case)</li>
+                                        <li>Slippers and Umbrella (ill bring this too po)</li>
+                                    </ul>
+                                </div>
+                                <div class="timeline">
+                                    <strong>Timeline:</strong>
+                                    <div class="timeline-item">
+                                        <span class="time">10am - 11am</span>
+                                        <span class="activity">Still Extra time po</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="time">11am - 12pm</span>
+                                        <span class="activity">Early lunch po and biyahe after</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="time">1pm - 6pm</span>
+                                        <span class="activity">Staying at hotel, cuddling and kissing (˶ᵔ ᵕ ᵔ˶)</span>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <span class="time">6pm - 7pm</span>
+                                        <span class="activity">Dinner before going home po (´｡• ᵕ •｡`)</span>
+                                    </div>
+                                </div>
+                                <div class="message-box">
+                                    <strong>♡ Special Note:</strong>
+                                    <p>I can't wait to see you Akiii ( ≖‿  ≖ )</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn next-btn" id="nextBtn">❯</button>
+            </div>
+            
+            <div class="carousel-indicators" id="carouselIndicators">
+                <span class="indicator active" data-index="0"></span>
+                <span class="indicator" data-index="1"></span>
+                <span class="indicator" data-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASCII Art Section -->
+    <section class="ascii-art-section">
+        <div class="container">
+            <div class="ascii-wrapper">
+                <div class="gif-ascii-side">
+                    <img src="https://media.tenor.com/TReOhQcXVuEAAAAj/kiss.gif" alt="decorative gif">
+                </div>
+                <pre class="ascii-art">
+                    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⢀⣀⣀⣄⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣼⣷⣶⣾⣿⣿⣿⣿⣿⣿⣷⣦⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣴⣶⣿⣿⣿⣶⣶⣤⣦⣤⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠈⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⢨⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠐⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠆⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠠⣀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⠀⠀⠀⠀⠀⠀⠈⠉⠉⢁⣬⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀
+⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀
+⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀
+⢀⣀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀
+⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
+⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀
+⠀⠀⠙⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
+⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
+⠀⠀⠘⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀
+⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀
+⠀⠀⠀⠀⠐⠛⠹⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿love⣿⣿youu⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+
+                            ｡ﾟﾟ･｡･ﾟﾟ｡ 
+                            ⁱ ʷⁱˡˡ ᵃˡʷᵃʸˢ ˡᵒᵛᵉ ʸᵒᵘ  
+                                - Kenny
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer Section -->
+    <section class="countdown-section">
+        <div class="container">
+            <h2 class="section-title">Count Down until our Date ( ๑ ˃̵ᴗ˂̵)و ♡</h2>
+            <div class="countdown-wrapper">
+                <div class="gif-countdown">
+                    <img src="https://media.tenor.com/n1EblbbMdbYAAAAj/bubu-dudu-sleep-dudu-bubu-love.gif" alt="countdown gif">
+                </div>
+                <div id="countdown" class="countdown">
+                    <div class="time-unit">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rsvp-section">
+                <button id="rsvpButton" class="rsvp-button locked" disabled>
+                    <span class="lock-icon">ꗃ</span>
+                    <span class="button-text">Unlock on Nov 30! Hehe it's a surprise!</span>
+                </button>
+                <p class="timer-message" id="timerMessage">Hehehehehehehehehehe I love you aki, huwag mo po ako tanungin about this one baka ma spoil</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="gif-footer">
+            <img src="https://media.tenor.com/tW4jk2HaN3YAAAAj/bubu-dudu.gif" alt="footer gif">
+        </div>
+        <p>Made with my づ♡ I love you for eternity Akiii</p>
+        <p class="footer-date">Our Date is at November 29 or 30, 2025 po ha</p>
+    </footer>
+
+    <script src="assets/js/anniversary.js"></script>
+</body>
+</html>

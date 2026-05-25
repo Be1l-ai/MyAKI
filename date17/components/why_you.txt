@@ -1,0 +1,22 @@
+      <div class="reasons-wrap">
+        <div class="reasons-title">17 reasons I'd pick you again tomorrow</div>
+        <div class="reasons-subtitle">// compiled over 17 dates. still growing.</div>
+        <div class="reason-item"><div class="reason-num">01</div><div class="reason-text">You laugh at the same weird things I do, at the exact same moment.<em>// not even planned. just synchronized.</em></div></div>
+        <div class="reason-item"><div class="reason-num">02</div><div class="reason-text">The way you process things quietly. You don't need an audience to feel deeply.<em>// that's actually rare.</em></div></div>
+        <div class="reason-item"><div class="reason-num">03</div><div class="reason-text">You are funnier than you think you are. Like genuinely.<em>// i'm not just saying that.</em></div></div>
+        <div class="reason-item"><div class="reason-num">04</div><div class="reason-text">How you look when you're thinking but trying not to show it.<em>// your face always gives it away a little.</em></div></div>
+        <div class="reason-item"><div class="reason-num">05</div><div class="reason-text">You never love halfway. Even when you're terrified, you stay.<em>// that takes more courage than you know.</em></div></div>
+        <div class="reason-item"><div class="reason-num">06</div><div class="reason-text">The way you actually notice things. Small things. You just don't always say them out loud.<em>// i notice that too.</em></div></div>
+        <div class="reason-item"><div class="reason-num">07</div><div class="reason-text">Your weird comfort with silence. It never feels like a wall with you. More like a room.<em>// one I like being in.</em></div></div>
+        <div class="reason-item"><div class="reason-num">08</div><div class="reason-text">That when something is actually funny to you, your whole body laughs, not just your face.<em>// one of my favorite things in the world.</em></div></div>
+        <div class="reason-item"><div class="reason-num">09</div><div class="reason-text">You take care of yourself by yourself. That's not coldness. That's self-awareness.<em>// i respect it a lot.</em></div></div>
+        <div class="reason-item"><div class="reason-num">10</div><div class="reason-text">The fact that choosing me took something from you — and you did it anyway.<em>// that's not small.</em></div></div>
+        <div class="reason-item"><div class="reason-num">11</div><div class="reason-text">You are softer than you let on. And I mean that as the highest compliment.<em>// that softness is a gift.</em></div></div>
+        <div class="reason-item"><div class="reason-num">12</div><div class="reason-text">Your taste. In everything. You just know what feels right.<em>// cursed to be right most of the time.</em></div></div>
+        <div class="reason-item"><div class="reason-num">13</div><div class="reason-text">The fact that being with you never feels like I have to perform.<em>// i can just… be there.</em></div></div>
+        <div class="reason-item"><div class="reason-num">14</div><div class="reason-text">You make ordinary things feel like they matter.<em>// a talent you don't give yourself credit for.</em></div></div>
+        <div class="reason-item"><div class="reason-num">15</div><div class="reason-text">The way you exist without needing everyone's approval. That kind of quiet confidence is hard to find.<em>// i'm a little in awe of it honestly.</em></div></div>
+        <div class="reason-item"><div class="reason-num">16</div><div class="reason-text">That every date, I learn something new about you without you even trying.<em>// you just keep going.</em></div></div>
+        <div class="reason-item"><div class="reason-num">17</div><div class="reason-text">That I'm still here, on date 17, and this is still the only list I'm thinking about.<em>// no other document open.</em></div></div>
+      </div>
+    

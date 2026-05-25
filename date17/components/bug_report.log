@@ -1,0 +1,39 @@
+      <div class="bug-wrap">
+        <div class="bug-header">
+          <div class="bug-header-title">BUG REPORT — relationship_v17.build</div>
+          <div class="bug-header-meta">
+            Filed by: me<br>
+            Date: date 17<br>
+            Status: actively ignoring most of these
+          </div>
+        </div>
+        <div class="bug-item">
+          <div class="bug-id">BUG #001 — SEVERITY: HIGH</div>
+          <div class="bug-title">She is too funny. Causes uncontrollable snorting.</div>
+          <div class="bug-desc">Unprompted, will say something that breaks me. No warning. No patch available. Side effects include: looking embarrassing in public, laughing until my stomach hurts.</div>
+          <div class="bug-status status-wontfix">Won't fix</div>
+        </div>
+        <div class="bug-item">
+          <div class="bug-id">BUG #002 — SEVERITY: MEDIUM</div>
+          <div class="bug-title">Says "I'm fine." System logs indicate otherwise.</div>
+          <div class="bug-desc">Known discrepancy between reported status and actual internal state. Workaround implemented: wait. She'll process. She always comes back around. Respect the cycle.</div>
+          <div class="bug-status status-known">Known issue — accepted</div>
+        </div>
+        <div class="bug-item">
+          <div class="bug-id">BUG #003 — SEVERITY: CRITICAL</div>
+          <div class="bug-title">Makes me fall harder with no apparent effort on her part.</div>
+          <div class="bug-desc">Passive effect. She is just existing and it keeps happening. Attempted to replicate root cause — cannot isolate. Possibly it's the laugh. Possibly the quiet. Possibly all of it.</div>
+          <div class="bug-status status-wontfix">Won't fix. Enjoying it.</div>
+        </div>
+        <div class="bug-item">
+          <div class="bug-id">BUG #004 — SEVERITY: LOW</div>
+          <div class="bug-title">Avoids big emotions. Stores them like untouched files.</div>
+          <div class="bug-desc">Files exist. She has them. They're just in a folder she doesn't always open. That's okay. I'm not trying to pry it open. Just letting her know the folder is safe with me.</div>
+          <div class="bug-status status-working">Working as intended</div>
+        </div>
+        <div class="bug-footer">
+          // summary: none of these are actually bugs. they're features.<br>
+          // would not trade a single one. do not ship a patch.
+        </div>
+      </div>
+    

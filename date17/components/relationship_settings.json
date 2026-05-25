@@ -1,0 +1,101 @@
+      <div class="settings-wrap">
+        <div class="settings-sidebar">
+          <div class="settings-sidebar-item active" data-panel="general">General</div>
+          <div class="settings-sidebar-item" data-panel="privacy">Privacy</div>
+          <div class="settings-sidebar-item" data-panel="notifications">Notifications</div>
+          <div class="settings-sidebar-item" data-panel="about">About</div>
+        </div>
+        <div class="settings-main">
+          <div class="settings-panel active" data-panel="general">
+            <div class="settings-section">
+              <div class="settings-section-title">Her settings</div>
+              <div class="setting-row">
+                <div><div class="setting-label">Avoidant mode</div><div class="setting-desc">Processes emotions internally before sharing</div></div>
+                <div class="toggle on"><div class="toggle-knob"></div></div>
+              </div>
+              <div class="setting-row">
+                <div><div class="setting-label">Big feelings suppressor</div><div class="setting-desc">Keeps large emotions at a manageable volume</div></div>
+                <div class="toggle on"><div class="toggle-knob"></div></div>
+              </div>
+              <div class="setting-row">
+                <div><div class="setting-label">Secretly soft mode</div><div class="setting-desc">Feels everything, tells almost no one</div></div>
+                <div class="toggle on"><div class="toggle-knob"></div></div>
+              </div>
+              <div class="setting-row">
+                <div><div class="setting-label">Funny as a coping mechanism</div><div class="setting-desc">Enabled by default. Cannot be disabled.</div></div>
+                <div class="toggle on"><div class="toggle-knob"></div></div>
+              </div>
+              <div class="setting-row">
+                <div><div class="setting-label">Letting people in (full access)</div><div class="setting-desc">Takes time. Worth the wait.</div></div>
+                <div class="setting-value">slowly loading…</div>
+              </div>
+            </div>
+            <div class="settings-section">
+              <div class="settings-section-title">Status details</div>
+              <div class="setting-card">
+                <div class="setting-label">Current mode</div>
+                <div class="setting-desc">Soft launch, emotionally stable, highly readable when she wants to be.</div>
+              </div>
+              <div class="setting-card">
+                <div class="setting-label">Visible signals</div>
+                <div class="setting-desc">A smile that arrives late, a joke that protects the truth, and a lot more care than she says out loud.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-panel" data-panel="privacy">
+            <div class="settings-section">
+              <div class="settings-section-title">Privacy</div>
+              <div class="setting-card">
+                <div class="setting-label">Default access</div>
+                <div class="setting-desc">Takes a while to grant. Once given, it means something.</div>
+              </div>
+              <div class="setting-card">
+                <div class="setting-label">Unread thoughts</div>
+                <div class="setting-desc">Stored safely, not deleted, just not always surfaced immediately.</div>
+              </div>
+              <div class="setting-row">
+                <div><div class="setting-label">Keeping things to herself</div><div class="setting-desc">On purpose, not as a flaw</div></div>
+                <div class="setting-value">RESPECTED</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-panel" data-panel="notifications">
+            <div class="settings-section">
+              <div class="settings-section-title">Notifications</div>
+              <div class="setting-row">
+                <div><div class="setting-label">Sweet texts</div><div class="setting-desc">Allowed at any time</div></div>
+                <div class="toggle on"><div class="toggle-knob"></div></div>
+              </div>
+              <div class="setting-row">
+                <div><div class="setting-label">Reassurance pings</div><div class="setting-desc">Route directly to the soft part of her brain</div></div>
+                <div class="toggle on"><div class="toggle-knob"></div></div>
+              </div>
+              <div class="setting-card">
+                <div class="setting-label">Alert detail</div>
+                <div class="setting-desc">If she goes quiet, it usually means she is processing, not disappearing.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-panel" data-panel="about">
+            <div class="settings-section">
+              <div class="settings-section-title">About</div>
+              <div class="setting-card">
+                <div class="setting-label">Build</div>
+                <div class="setting-desc">date17 relationship shell v1.0</div>
+              </div>
+              <div class="setting-card">
+                <div class="setting-label">Notes</div>
+                <div class="setting-desc">Quiet, careful, and way more full of feeling than it first looks.</div>
+              </div>
+              <div class="setting-row">
+                <div><div class="setting-label">Current status</div><div class="setting-desc">Still here, still chosen, still loved</div></div>
+                <div class="setting-value">ONLINE</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
