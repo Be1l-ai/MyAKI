@@ -192,23 +192,67 @@ function initPlayer() {
     return;
   }
 
+  const audio = document.getElementById('player-audio');
+  const btnRev = document.getElementById('btn-rev');
+  const btnFwd = document.getElementById('btn-fwd');
+  const progressBar = document.querySelector('.progress-bar');
+  const progressFill = progressBar?.querySelector('.progress-fill');
+  const timeElapsed = document.getElementById('time-elapsed');
+  const timeDuration = document.getElementById('time-duration');
+
   let isPlaying = false;
-  playButton.addEventListener('click', () => {
-    isPlaying = !isPlaying;
+
+  const updatePlayButton = () => {
     playButton.textContent = isPlaying ? '❚❚' : '▶';
     playButton.setAttribute('aria-label', isPlaying ? 'Pause' : 'Play');
+  };
+
+  playButton.addEventListener('click', () => {
+    if (!audio) return;
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
   });
 
-  document.querySelectorAll('.progress-bar').forEach((bar) => {
-    bar.addEventListener('click', (event) => {
-      const rect = bar.getBoundingClientRect();
-      const percent = Math.min(100, Math.max(0, ((event.clientX - rect.left) / rect.width) * 100));
-      const fill = bar.querySelector('.progress-fill');
-      if (fill) {
-        fill.style.width = percent + '%';
+  if (audio) {
+    audio.addEventListener('play', () => {
+      isPlaying = true;
+      updatePlayButton();
+    });
+    audio.addEventListener('pause', () => {
+      isPlaying = false;
+      updatePlayButton();
+    });
+    audio.addEventListener('loadedmetadata', () => {
+      const d = Math.floor(audio.duration || 0);
+      timeDuration.textContent = `${Math.floor(d/60)}:${String(d%60).padStart(2,'0')}`;
+    });
+    audio.addEventListener('timeupdate', () => {
+      const cur = Math.floor(audio.currentTime || 0);
+      timeElapsed.textContent = `${Math.floor(cur/60)}:${String(cur%60).padStart(2,'0')}`;
+      if (progressFill && audio.duration) {
+        const pct = (audio.currentTime / audio.duration) * 100;
+        progressFill.style.width = pct + '%';
       }
     });
-  });
+
+    // rev/fwd
+    btnRev?.addEventListener('click', () => {
+      audio.currentTime = Math.max(0, audio.currentTime - 10);
+    });
+    btnFwd?.addEventListener('click', () => {
+      audio.currentTime = Math.min(audio.duration || audio.currentTime + 10, audio.duration || audio.currentTime + 10);
+    });
+
+    // clicking progress bar seeks
+    progressBar?.addEventListener('click', (event) => {
+      const rect = progressBar.getBoundingClientRect();
+      const percent = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width));
+      if (audio.duration) audio.currentTime = percent * audio.duration;
+    });
+  }
 }
 
 function initInteractiveControls() {
