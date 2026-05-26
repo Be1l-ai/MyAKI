@@ -88,8 +88,23 @@ body {
 .menubar-item {
   font-size: 11px;
   color: var(--text-muted);
-  cursor: default;
+  cursor: pointer;
 }
+
+/* Menubar dropdown */
+.menubar-dropdown {
+  position: absolute;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  min-width: 140px;
+  z-index: 1000;
+}
+.menubar-dropdown ul { list-style: none; padding: 0; margin: 0; }
+.menubar-dropdown li { padding: 8px 10px; font-size: 13px; color: var(--text); cursor: pointer; border-radius: 6px; }
+.menubar-dropdown li:hover { background: rgba(255,255,255,0.03); }
 .menubar-right {
   display: flex;
   gap: 12px;
@@ -474,6 +489,20 @@ body {
   font-style: italic;
 }
 .player-note strong { color: var(--text); font-style: normal; }
+
+.player-lyrics {
+  color: var(--text);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  line-height: 1.45;
+  min-height: 2.6em;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.player-lyrics.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* --- SETTINGS --- */
 .settings-wrap {

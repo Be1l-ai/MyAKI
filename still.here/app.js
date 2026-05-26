@@ -56,7 +56,82 @@ function closeWindow(id) {
   document.querySelectorAll('[data-window="' + id + '"]').forEach((element) => {
     element.classList.remove('active');
   });
+  // if closing the music player, pause playback
+  if (id === 'player') {
+    const audio = document.getElementById('player-audio');
+    if (audio && !audio.paused) {
+      audio.pause();
+    }
+  }
 }
+
+// Subtitle rendering: show active VTT cues in #player-subtitles
+(function setupSubtitles() {
+  function renderLyricsFromTrack(track, currentTime) {
+    const el = document.getElementById('player-lyrics');
+    if (!el) return;
+
+    const cues = track?.cues;
+    const now = typeof currentTime === 'number' ? currentTime : 0;
+    if (cues && cues.length) {
+      let matchedCue = null;
+      let nextCue = null;
+      for (let j = 0; j < cues.length; j++) {
+        const cue = cues[j];
+        if (now >= cue.startTime && now <= cue.endTime) {
+          matchedCue = cue;
+          break;
+        }
+        if (!nextCue && cue.startTime > now) {
+          nextCue = cue;
+        }
+      }
+
+      const cueToShow = matchedCue || nextCue || cues[0];
+      if (cueToShow) {
+        el.innerHTML = cueToShow.text.replace(/\n/g, '<br>');
+        el.classList.add('visible');
+        return;
+      }
+    }
+
+    el.innerHTML = '';
+    el.classList.remove('visible');
+  }
+
+  // Wait until the player-audio element exists in the DOM (fragment may load later)
+  function waitForAudio() {
+    const audio = document.getElementById('player-audio');
+    if (!audio) {
+      setTimeout(waitForAudio, 200);
+      return;
+    }
+
+    // Now wait for textTracks to be available
+    function bindTracks() {
+      const tracks = audio.textTracks;
+      if (!tracks || tracks.length === 0) {
+        setTimeout(bindTracks, 200);
+        return;
+      }
+
+      for (let i = 0; i < tracks.length; i++) {
+        const t = tracks[i];
+        try { t.mode = 'hidden'; } catch (e) {}
+          const refresh = () => renderLyricsFromTrack(t, audio.currentTime);
+        t.addEventListener('cuechange', refresh);
+        audio.addEventListener('timeupdate', refresh);
+        audio.addEventListener('loadedmetadata', refresh);
+          audio.addEventListener('seeked', refresh);
+        refresh();
+      }
+    }
+
+    bindTracks();
+  }
+
+  waitForAudio();
+})();
 
 function initWindowDragging() {
   document.querySelectorAll('.titlebar').forEach((titlebar) => {
@@ -154,6 +229,78 @@ function initToggles() {
   });
 }
 
+function initMenubar() {
+  const menus = {
+    File: ['New','Open','Save','Export'],
+    Edit: ['Undo','Redo','Cut','Copy','Paste'],
+    View: ['Toggle Fullscreen','Zoom In','Zoom Out'],
+    Help: ['About','Report Bug']
+  };
+
+  let openDropdown = null;
+
+  function closeDropdown() {
+    if (openDropdown) {
+      openDropdown.remove();
+      openDropdown = null;
+    }
+  }
+
+  document.querySelectorAll('.menubar-item').forEach((item) => {
+    item.setAttribute('tabindex', '0');
+    item.addEventListener('click', (e) => {
+      const name = item.textContent.trim();
+      const list = menus[name];
+      if (!list) return;
+      // toggle
+      if (openDropdown && openDropdown.dataset.for === name) {
+        closeDropdown();
+        return;
+      }
+      closeDropdown();
+      const rect = item.getBoundingClientRect();
+      const dropdown = document.createElement('div');
+      dropdown.className = 'menubar-dropdown';
+      dropdown.dataset.for = name;
+      const ul = document.createElement('ul');
+      list.forEach((label) => {
+        const li = document.createElement('li');
+        li.textContent = label;
+        li.addEventListener('click', () => {
+          // basic actions
+          if (name === 'Help' && label === 'About') {
+            alert('still.here — a soft place to land.');
+          }
+          closeDropdown();
+        });
+        ul.appendChild(li);
+      });
+      dropdown.appendChild(ul);
+      document.body.appendChild(dropdown);
+      // position under item
+      dropdown.style.left = Math.max(8, rect.left) + 'px';
+      dropdown.style.top = rect.bottom + 8 + 'px';
+      openDropdown = dropdown;
+    });
+
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        item.click();
+      } else if (e.key === 'Escape') {
+        closeDropdown();
+      }
+    });
+  });
+
+  // close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.menubar-dropdown') && !e.target.closest('.menubar-item')) {
+      closeDropdown();
+    }
+  });
+}
+
 function initSettingsSidebar() {
   const panelMap = new Map();
 
@@ -199,12 +346,26 @@ function initPlayer() {
   const progressFill = progressBar?.querySelector('.progress-fill');
   const timeElapsed = document.getElementById('time-elapsed');
   const timeDuration = document.getElementById('time-duration');
+  const sourceUrl = audio?.dataset?.src || audio?.getAttribute('src') || audio?.currentSrc;
 
   let isPlaying = false;
+  let mediaObjectUrl = null;
 
   const updatePlayButton = () => {
     playButton.textContent = isPlaying ? '❚❚' : '▶';
     playButton.setAttribute('aria-label', isPlaying ? 'Pause' : 'Play');
+  };
+
+  const seekFromEvent = (event) => {
+    if (!audio || !progressBar || !audio.duration) return;
+    const rect = progressBar.getBoundingClientRect();
+    const percent = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width));
+    const nextTime = percent * audio.duration;
+    if (typeof audio.fastSeek === 'function') {
+      audio.fastSeek(nextTime);
+    } else {
+      audio.currentTime = nextTime;
+    }
   };
 
   playButton.addEventListener('click', () => {
@@ -217,6 +378,24 @@ function initPlayer() {
   });
 
   if (audio) {
+    if (sourceUrl) {
+      fetch(sourceUrl)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Failed to preload audio');
+          }
+          return response.blob();
+        })
+        .then((blob) => {
+          mediaObjectUrl = URL.createObjectURL(blob);
+          audio.src = mediaObjectUrl;
+          audio.load();
+        })
+        .catch(() => {
+          // Fall back to the source element if blob preloading is unavailable.
+        });
+    }
+
     audio.addEventListener('play', () => {
       isPlaying = true;
       updatePlayButton();
@@ -247,11 +426,35 @@ function initPlayer() {
     });
 
     // clicking progress bar seeks
-    progressBar?.addEventListener('click', (event) => {
-      const rect = progressBar.getBoundingClientRect();
-      const percent = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width));
-      if (audio.duration) audio.currentTime = percent * audio.duration;
-    });
+    if (progressBar) {
+      let dragging = false;
+
+      const scrub = (event) => {
+        seekFromEvent(event);
+      };
+
+      progressBar.addEventListener('click', scrub);
+      progressBar.addEventListener('pointerdown', (event) => {
+        dragging = true;
+        progressBar.setPointerCapture?.(event.pointerId);
+        scrub(event);
+      });
+      progressBar.addEventListener('pointermove', (event) => {
+        if (!dragging) return;
+        scrub(event);
+      });
+      progressBar.addEventListener('pointerup', (event) => {
+        if (!dragging) return;
+        dragging = false;
+        scrub(event);
+      });
+      progressBar.addEventListener('pointercancel', () => {
+        dragging = false;
+      });
+      progressBar.addEventListener('lostpointercapture', () => {
+        dragging = false;
+      });
+    }
   }
 }
 
@@ -303,4 +506,5 @@ initFragmentLoads()
   })
   .finally(() => {
     initInteractiveControls();
+    initMenubar();
   });
