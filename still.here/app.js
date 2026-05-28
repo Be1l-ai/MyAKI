@@ -42,13 +42,38 @@ function clampWindowToViewport(win) {
   win.style.top = top + 'px';
 }
 
+
+// List of all window IDs except the letter
+const WINDOW_IDS = ['reasons', 'player', 'settings', 'bugs', 'drafts'];
+
+function markWindowOpened(id) {
+  if (WINDOW_IDS.includes(id)) {
+    let opened = JSON.parse(localStorage.getItem('openedWindows') || '[]');
+    if (!opened.includes(id)) {
+      opened.push(id);
+      localStorage.setItem('openedWindows', JSON.stringify(opened));
+    }
+  }
+}
+
+function allWindowsOpened() {
+  const opened = JSON.parse(localStorage.getItem('openedWindows') || '[]');
+  return WINDOW_IDS.every(id => opened.includes(id));
+}
+
 function openWindow(id) {
+  if (id === 'letter' && !allWindowsOpened()) {
+    if (window.showLetterLockGif) window.showLetterLockGif();
+    else alert('Read the file name Aki');
+    return;
+  }
   const win = document.getElementById('win-' + id);
   win.classList.remove('hidden');
   topZ += 1;
   win.style.zIndex = topZ;
   setLauncherState(id);
   clampWindowToViewport(win);
+  markWindowOpened(id);
 }
 
 function closeWindow(id) {
@@ -269,7 +294,7 @@ function initMenubar() {
         li.addEventListener('click', () => {
           // basic actions
           if (name === 'Help' && label === 'About') {
-            alert('still.here — a soft place to land.');
+            alert('Hi Akiiiii, I love you so muchhh. Kiss po kasi nakita mo to.');
           }
           closeDropdown();
         });

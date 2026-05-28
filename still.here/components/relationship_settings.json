@@ -8,91 +8,91 @@
         <div class="settings-main">
           <div class="settings-panel active" data-panel="general">
             <div class="settings-section">
-              <div class="settings-section-title">Her settings</div>
+              <div class="settings-section-title">Communication Style</div>
               <div class="setting-row">
-                <div><div class="setting-label">Avoidant mode</div><div class="setting-desc">Processes emotions internally before sharing</div></div>
+                <div><div class="setting-label">Needs space sometimes (A lot of times)</div><div class="setting-desc">Feels things deeply, takes a little time before letting them out. Take your time Aki</div></div>
                 <div class="toggle on"><div class="toggle-knob"></div></div>
               </div>
               <div class="setting-row">
-                <div><div class="setting-label">Big feelings suppressor</div><div class="setting-desc">Keeps large emotions at a manageable volume</div></div>
+                <div><div class="setting-label">Big feelings</div><div class="setting-desc">Feels everything and get overwhelmed easily, but tries to keep the soft and gentle</div></div>
                 <div class="toggle on"><div class="toggle-knob"></div></div>
               </div>
               <div class="setting-row">
-                <div><div class="setting-label">Secretly soft mode</div><div class="setting-desc">Feels everything, tells almost no one</div></div>
+                <div><div class="setting-label">Moodshifts</div><div class="setting-desc">Changes mood fast, like really fast and cute</div></div>
                 <div class="toggle on"><div class="toggle-knob"></div></div>
               </div>
               <div class="setting-row">
-                <div><div class="setting-label">Funny as a coping mechanism</div><div class="setting-desc">Enabled by default. Cannot be disabled.</div></div>
+                <div><div class="setting-label">Tease and Laughs</div><div class="setting-desc">Tease and laughs a lot, even pag sinermonan... but notes and remembers everything deeply</div></div>
                 <div class="toggle on"><div class="toggle-knob"></div></div>
               </div>
               <div class="setting-row">
-                <div><div class="setting-label">Letting people in (full access)</div><div class="setting-desc">Takes time. Worth the wait.</div></div>
-                <div class="setting-value">slowly loading…</div>
+                <div><div class="setting-label">Letting you in</div><div class="setting-desc">It’s slow, but real. Take your time Aki, this is a safe place. You can be yourself.</div></div>
+                <div class="setting-value">opening up, bit by bit…</div>
               </div>
             </div>
             <div class="settings-section">
-              <div class="settings-section-title">Status details</div>
+              <div class="settings-section-title">How she is right now</div>
               <div class="setting-card">
-                <div class="setting-label">Current mode</div>
-                <div class="setting-desc">Soft launch, emotionally stable, highly readable when she wants to be.</div>
+                <div class="setting-label">Today’s vibe</div>
+                <div class="setting-desc">As usual, sometimes sweet, sometimes upset but always my Aki</div>
               </div>
               <div class="setting-card">
-                <div class="setting-label">Visible signals</div>
-                <div class="setting-desc">A smile that arrives late, a joke that protects the truth, and a lot more care than she says out loud.</div>
+                <div class="setting-label">My comment</div>
+                <div class="setting-desc">Be yourself lang po Akiii, I really do love everything about you like all parts</div>
               </div>
             </div>
           </div>
 
           <div class="settings-panel" data-panel="privacy">
             <div class="settings-section">
-              <div class="settings-section-title">Privacy</div>
+              <div class="settings-section-title">Her privacy</div>
               <div class="setting-card">
-                <div class="setting-label">Default access</div>
-                <div class="setting-desc">Takes a while to grant. Once given, it means something.</div>
+                <div class="setting-label">Letting you close</div>
+                <div class="setting-desc">It’s not instant, but when she lets someone in its deep and worth a lot.</div>
               </div>
               <div class="setting-card">
-                <div class="setting-label">Unread thoughts</div>
-                <div class="setting-desc">Stored safely, not deleted, just not always surfaced immediately.</div>
+                <div class="setting-label">Thoughts not yet shared</div>
+                <div class="setting-desc">She keeps them safe, and sometimes say it when shes ready. My Aki just need time.</div>
               </div>
               <div class="setting-row">
-                <div><div class="setting-label">Keeping things to herself</div><div class="setting-desc">On purpose, not as a flaw</div></div>
-                <div class="setting-value">RESPECTED</div>
+                <div><div class="setting-label">Some things are just hers</div><div class="setting-desc">Not a flaw, just her way</div></div>
+                <div class="setting-value">ALWAYS RESPECTED</div>
               </div>
             </div>
           </div>
 
           <div class="settings-panel" data-panel="notifications">
             <div class="settings-section">
-              <div class="settings-section-title">Notifications</div>
+              <div class="settings-section-title">Little reminders of love</div>
               <div class="setting-row">
-                <div><div class="setting-label">Sweet texts</div><div class="setting-desc">Allowed at any time</div></div>
+                <div><div class="setting-label">Sweet messages</div><div class="setting-desc">Always welcome, even at 2am hehe</div></div>
                 <div class="toggle on"><div class="toggle-knob"></div></div>
               </div>
               <div class="setting-row">
-                <div><div class="setting-label">Reassurance pings</div><div class="setting-desc">Route directly to the soft part of her brain</div></div>
+                <div><div class="setting-label">Reassurance check-ins and relationship check-up</div><div class="setting-desc">Would never forget about it, I promised.</div></div>
                 <div class="toggle on"><div class="toggle-knob"></div></div>
               </div>
               <div class="setting-card">
-                <div class="setting-label">Alert detail</div>
-                <div class="setting-desc">If she goes quiet, it usually means she is processing, not disappearing.</div>
+                <div class="setting-label">If she’s quiet</div>
+                <div class="setting-desc">She’s just thinking things through, not going anywhere. Still here, still my Aki.</div>
               </div>
             </div>
           </div>
 
           <div class="settings-panel" data-panel="about">
             <div class="settings-section">
-              <div class="settings-section-title">About</div>
+              <div class="settings-section-title">A little about her</div>
               <div class="setting-card">
-                <div class="setting-label">Build</div>
-                <div class="setting-desc">date17 relationship shell v1.0</div>
+                <div class="setting-label">How she’s made</div>
+                <div class="setting-desc">A lot bit of courage, a lot of heart, and a lot of stubborn, kindness, beauty, smart, and everything nice.</div>
               </div>
               <div class="setting-card">
-                <div class="setting-label">Notes</div>
-                <div class="setting-desc">Quiet, careful, and way more full of feeling than it first looks.</div>
+                <div class="setting-label">What to know</div>
+                <div class="setting-desc">Gentle, thoughtful, and overflowing with feeling (that she hides a lot and have hard time expressing)</div>
               </div>
               <div class="setting-row">
-                <div><div class="setting-label">Current status</div><div class="setting-desc">Still here, still chosen, still loved</div></div>
-                <div class="setting-value">ONLINE</div>
+                <div><div class="setting-label">Right now</div><div class="setting-desc">Im still here. Still choosing you. Still loving you. Would never get tired of you.   --Kenny</div></div>
+                <div class="setting-value">ALWAYS</div>
               </div>
             </div>
           </div>

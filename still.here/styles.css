@@ -1,3 +1,45 @@
+/* --- LOCK OVERLAY --- */
+.lock-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20,20,35,0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lock-message {
+  background: var(--surface2);
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  padding: 40px 36px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  text-align: center;
+  color: var(--text);
+  max-width: 90vw;
+}
+.lock-message h2 {
+  font-size: 2em;
+  margin-bottom: 18px;
+  color: var(--accent);
+}
+.lock-message p {
+  font-size: 1.1em;
+  margin-bottom: 24px;
+}
+.lock-message button {
+  font-size: 1em;
+  padding: 8px 24px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.lock-message button:hover {
+  background: var(--accent2);
+}
 :root {
   --bg: #0b0b14;
   --surface: #13131f;
