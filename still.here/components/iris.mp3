@@ -3,8 +3,8 @@
         <div class="song-title">Iris</div>
         <div class="song-artist">Goo Goo Dolls · Dizzy Up the Girl</div>
         <div style="width:100%">
-          <audio id="player-audio" data-src="./components/iris_real_music.mp3" preload="metadata">
-            <track kind="subtitles" src="./components/iris.vtt" srclang="en" label="English subtitles">
+          <audio id="player-audio" data-src="still.here/components/iris_real_music.mp3" preload="metadata">
+            <track kind="subtitles" src="still.here/components/iris.vtt" srclang="en" label="English subtitles">
             Your browser does not support the audio element.
           </audio>
           <div id="player-lyrics" class="player-lyrics" aria-live="polite" style="min-height:2.6em;padding:8px 10px;font-size:15px;text-align:center;color:#fff;max-height:5rem;overflow:hidden;margin-bottom:10px;">
@@ -18,9 +18,10 @@
           <button class="ctrl-btn" id="btn-fwd">⏭</button>
         </div>
         <div class="player-note">
+          <!-- EDIT THIS MESSAGE TO CHANGE THE IRIS WINDOW TEXT -->
           <strong>"And I don't want the world to see me<br>'cause I don't think that they'd understand."</strong><br><br>
-          I think about this line a lot. You're someone who keeps your most important feelings to yourself — not because you don't have them, but because they're yours and they're real and the world doesn't always deserve them.<br><br>
-          This song is ours. But this line especially feels like you.<br>I'm glad you let me close enough to hear it anyway.
+          I think about this line a lot, Aki. You're someone who keeps your most important feelings to yourself and it's not because you don't have them, but because the world doesn't always deserve them.<br><br>
+          This song is ours. But this line especially feels like you.<br>I'm glad, Aki. Thank you for letting me close enough to hear it anyway.
         </div>
       </div>
     
